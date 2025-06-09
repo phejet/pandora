@@ -1,2 +1,9 @@
 CompileFlags:
   CompilationDatabase: build
+  Add: [
+    -isystem, /nix/store/412418grw31j2qfi6j6mhic6gfd190n9-compiler-rt-libc-17.0.6-dev/include,
+    -isystem, /nix/store/f2lglcw69yh2yyihxq6kvhpanc3s1n9p-gcc-13.2.0/include/c++/13.2.0,
+    -isystem, /nix/store/f2lglcw69yh2yyihxq6kvhpanc3s1n9p-gcc-13.2.0/include/c++/13.2.0/x86_64-unknown-linux-gnu,
+    -isystem, /nix/store/9yr64l4j5kghwapqzwd6azk9l57mx87p-clang-wrapper-17.0.6/resource-root/include,
+    -isystem, /nix/store/jig62nn8174n4dlk05lqwsvs5wd2c64r-glibc-2.39-52-dev/include
+  ]

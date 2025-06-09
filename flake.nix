@@ -15,10 +15,6 @@
         nixpkgs.legacyPackages.x86_64-linux.clang
         nixpkgs.legacyPackages.x86_64-linux.clang-tools
       ];
-      shellHook = ''
-        export CC=clang
-        export CXX=clang++
-      '';
     };
   };
 }
