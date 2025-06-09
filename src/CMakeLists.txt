@@ -10,3 +10,9 @@ install(TARGETS mylib
     ARCHIVE DESTINATION lib
     PUBLIC_HEADER DESTINATION include/mylib
 )
+
+# Install CMake package config files for consumers
+install(FILES
+    ${CMAKE_CURRENT_SOURCE_DIR}/../cmake/FindMyLib.cmake
+    DESTINATION lib/cmake/mylib
+)
