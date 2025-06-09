@@ -19,3 +19,6 @@ enable_testing()
 
 add_subdirectory(src)
 add_subdirectory(tests)
+
+# Install the main headers from the include directory
+install(DIRECTORY include/ DESTINATION include)

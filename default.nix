@@ -8,11 +8,11 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ cmake ninja ];
 
-  installPhase = ''
-    mkdir -p $out/lib $out/include/mylib
-    cp libmylib.a $out/lib/
-    cp -r ${src}/include/mylib/* $out/include/mylib/
-  '';
+  # installPhase = ''
+  #   mkdir -p $out/lib $out/include/mylib
+  #   cp libmylib.a $out/lib/
+  #   cp -r ${src}/include/mylib/* $out/include/mylib/
+  # '';
 
   meta = with lib; {
     description = "My C++ static library";
