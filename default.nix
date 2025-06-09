@@ -7,7 +7,6 @@ stdenv.mkDerivation rec {
   src = ./.;
 
   nativeBuildInputs = [ cmake ninja ];
-  buildInputs = [ gcc ];
 
   installPhase = ''
     mkdir -p $out/lib $out/include/mylib

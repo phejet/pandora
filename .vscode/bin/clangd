@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Wrapper script to launch clangd from the current PATH (Nix devShell)
+exec clangd "$@"

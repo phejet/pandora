@@ -6,11 +6,16 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Always generate compile_commands.json
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "")
 
 add_library(mylib STATIC src/test_lib.cpp)
 target_include_directories(mylib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 set_target_properties(mylib PROPERTIES PUBLIC_HEADER include/mylib/mylib.h)
+
+if(CMAKE_EXPORT_COMPILE_COMMANDS)
+  set(CMAKE_CXX_STANDARD_INCLUDE_DIRECTORIES 
+      ${CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES})
+endif()
 
 # Enable testing
 include(CTest)
